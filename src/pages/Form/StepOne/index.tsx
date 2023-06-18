@@ -13,7 +13,6 @@ const StepOne: React.FC = () => {
         style={{
           flex: 1,
           justifyContent: "center",
-          //   alignItems: "center",
           width: "100%",
           height: "100%",
           paddingHorizontal: 20,
@@ -21,7 +20,7 @@ const StepOne: React.FC = () => {
       >
         <Box mt={20}>
           <Text variant="bodyLarge">
-            Precisamos de alguns dados para valiade a informação
+            Precisamos validar algumas informações
           </Text>
         </Box>
         <Box mt={20}>
