@@ -11,10 +11,47 @@ import Form from "./pages/Form";
 import Transition from "./pages/Transition";
 import Calendar from "./pages/Calendar";
 import CalendarPage from "./pages/Calendar";
+import Tickets from "./pages/Tickets";
+import Pay from "./pages/Pay";
+import { Unpay } from "./pages/Unpay";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 const Tab = createBottomTabNavigator();
 
 const Stack = createNativeStackNavigator();
+
+const TopTab = createMaterialTopTabNavigator();
+
+function MyTopTabs() {
+  return (
+    <Tab.Navigator tabBarPosition="top">
+      <Tab.Screen
+        name="Pay"
+        component={Pay}
+        options={{
+          tabBarAccessibilityLabel: "Pay",
+          tabBarLabel: "Pagos",
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="barcode" size={24} color="black" />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Unpay"
+        component={Unpay}
+        options={{
+          tabBarAccessibilityLabel: "Unpay",
+          tabBarLabel: "A Pagar",
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="barcode" size={24} color="gray" />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
 
 const MyTabs = () => {
   return (
@@ -69,11 +106,6 @@ const Routes = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
-          name="MyTabs"
-          component={MyTabs}
-          options={{ headerShown: false }}
-        /> */}
         <Stack.Screen
           name="Form"
           component={Form}
@@ -87,6 +119,11 @@ const Routes = () => {
         <Stack.Screen
           name="MyTabs"
           component={MyTabs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Tickets"
+          component={MyTopTabs}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
