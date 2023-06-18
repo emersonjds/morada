@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Box } from "../../components/Spacing";
 import { Text } from "react-native-paper";
 import { Button } from "react-native-paper";
@@ -7,11 +7,21 @@ import LottieView from "lottie-react-native";
 const HomeScreen: React.FC = () => {
   const animation = useRef(null);
 
+  const executeAnimationOneTime = () => {
+    animation.current.play();
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      executeAnimationOneTime();
+    }, 2500);
+  }, []);
+
   return (
     <>
       <Box flex={1} p={20} alignItems={"center"} justifyContent={"center"}>
         <LottieView
-          autoPlay
+          //   autoPlay
           ref={animation}
           style={{
             // width: 200,
