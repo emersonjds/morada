@@ -22,13 +22,13 @@ const Form: React.FC = () => {
   };
 
   const progressStepsStyle = {
-    activeStepIconBorderColor: "#686868",
-    activeLabelColor: "#686868",
+    activeStepIconBorderColor: "#11009E",
+    activeLabelColor: "#11009E",
     activeStepNumColor: "white",
-    activeStepIconColor: "#686868",
-    completedStepIconColor: "#686868",
-    completedProgressBarColor: "#686868",
-    completedCheckColor: "#4bb543",
+    activeStepIconColor: "#11009E",
+    completedStepIconColor: "#03C988",
+    completedProgressBarColor: "#03C988",
+    completedCheckColor: "#fff",
   };
 
   const buttonTextStyle = {

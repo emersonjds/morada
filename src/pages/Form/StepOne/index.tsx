@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { TextInput } from "react-native-paper";
 import { Text } from "react-native-paper";
+import { Box } from "../../../components/Spacing";
 
 const StepOne: React.FC = () => {
   const [text, setText] = React.useState("");
@@ -18,16 +19,25 @@ const StepOne: React.FC = () => {
           paddingHorizontal: 20,
         }}
       >
-        <Text variant="bodySmall">Informe seu nome</Text>
-
-        <TextInput
-          label="Email"
-          value={text}
-          onChangeText={(text) => setText(text)}
-          style={{
-            width: "100%",
-          }}
-        />
+        <Box mt={20}>
+          <Text variant="bodyLarge">
+            Precisamos de alguns dados para valiade a informação
+          </Text>
+        </Box>
+        <Box mt={20}>
+          <Text variant="bodyLarge">Informe seu nome</Text>
+        </Box>
+        <Box mt={20}>
+          <TextInput
+            label="Nome"
+            value={text}
+            onChangeText={(text) => setText(text)}
+            style={{
+              width: "100%",
+              backgroundColor: "#fff",
+            }}
+          />
+        </Box>
       </View>
     </>
   );
