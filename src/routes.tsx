@@ -9,6 +9,7 @@ import HomeScreen from "./pages/HomeScreen";
 import Bills from "./pages/Bills";
 import Form from "./pages/Form";
 import Transition from "./pages/Transition";
+import Calendar from "./pages/Calendar";
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +29,20 @@ const MyTabs = () => {
           headerShown: false,
           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={24} color="black" />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Calendar"
+        component={Calendar}
+        options={{
+          tabBarLabel: "Calendar",
+          tabBarLabelStyle: {
+            color: "#000",
+          },
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="calendar" size={24} color="black" />
           ),
         }}
       />
@@ -54,6 +69,11 @@ const Routes = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="MyTabs"
+          component={MyTabs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Form"
           component={Form}
           options={{ headerShown: false }}
@@ -64,11 +84,11 @@ const Routes = () => {
           options={{ headerShown: false }}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="MyTabs"
           component={MyTabs}
           options={{ headerShown: false }}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
