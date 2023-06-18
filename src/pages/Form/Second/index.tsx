@@ -4,7 +4,7 @@ import { Box } from "../../../components/Spacing";
 import { Text, TextInput } from "react-native-paper";
 
 const Second: React.FC = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("456.765.467-43");
   return (
     <>
       <Box
@@ -21,7 +21,8 @@ const Second: React.FC = () => {
 
         <Box mt={20}>
           <TextInput
-            label="Nome"
+            label="CPF"
+            keyboardType="numeric"
             value={text}
             onChangeText={(text) => setText(text)}
             style={{

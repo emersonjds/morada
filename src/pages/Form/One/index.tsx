@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC, useState } from "react";
 import { View } from "react-native";
 import { TextInput } from "react-native-paper";
 import { Text } from "react-native-paper";
 import { Box } from "../../../components/Spacing";
 
-const StepOne: React.FC = () => {
-  const [text, setText] = React.useState("");
+const StepOne: FC = () => {
+  const [text, setText] = useState("Maria Clara Silva");
 
   return (
     <>

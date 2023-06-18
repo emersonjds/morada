@@ -7,17 +7,10 @@ import { ProgressSteps, ProgressStep } from "react-native-progress-steps";
 import StepOne from "./One";
 import Second from "./Second";
 import { Box } from "../../components/Spacing";
+import Third from "./Third";
 
 const Form: FC = () => {
   const navigation = useNavigation();
-
-  const onNextStep = () => {
-    console.log("called next step");
-  };
-
-  const onPrevStep = () => {
-    console.log("called previous step");
-  };
 
   const onSubmitSteps = () => {
     navigation.navigate("MyTabs");
@@ -52,11 +45,10 @@ const Form: FC = () => {
         <ProgressSteps {...progressStepsStyle}>
           <ProgressStep
             label="Nome"
-            onNext={onNextStep}
-            onPrevious={onPrevStep}
             scrollViewProps={defaultScrollViewProps}
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
+            nextBtnText="Próximo"
           >
             <View style={{ alignItems: "center", flex: 1 }}>
               <StepOne />
@@ -64,8 +56,8 @@ const Form: FC = () => {
           </ProgressStep>
           <ProgressStep
             label="CPF"
-            onNext={onNextStep}
-            onPrevious={onPrevStep}
+            nextBtnText="Próximo"
+            previousBtnText="Voltar"
             scrollViewProps={defaultScrollViewProps}
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
@@ -74,20 +66,18 @@ const Form: FC = () => {
           </ProgressStep>
           <ProgressStep
             label="Renda"
-            onNext={onNextStep}
-            onPrevious={onPrevStep}
+            nextBtnText="Próximo"
+            previousBtnText="Voltar"
             scrollViewProps={defaultScrollViewProps}
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
           >
-            <View style={{ alignItems: "center" }}>
-              <Text>This is the content within step 3!</Text>
-            </View>
+            <Third />
           </ProgressStep>
           <ProgressStep
             label="Reforma"
-            onNext={onNextStep}
-            onPrevious={onPrevStep}
+            nextBtnText="Próximo"
+            previousBtnText="Voltar"
             scrollViewProps={defaultScrollViewProps}
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
@@ -98,7 +88,8 @@ const Form: FC = () => {
           </ProgressStep>
           <ProgressStep
             label="Valor"
-            onPrevious={onPrevStep}
+            finishBtnText="Finalizar"
+            previousBtnText="Voltar"
             onSubmit={onSubmitSteps}
             scrollViewProps={defaultScrollViewProps}
             nextBtnTextStyle={buttonTextStyle}
