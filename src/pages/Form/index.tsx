@@ -5,6 +5,8 @@ import { View, Text } from "react-native";
 
 import { ProgressSteps, ProgressStep } from "react-native-progress-steps";
 import StepOne from "./StepOne";
+import Second from "./Second";
+import { Box } from "../../components/Spacing";
 
 const Form: React.FC = () => {
   const navigation = useNavigation();
@@ -46,7 +48,7 @@ const Form: React.FC = () => {
 
   return (
     <>
-      <View style={{ flex: 1, marginTop: 50 }}>
+      <Box flex={1} bg="#fff" mt={20}>
         <ProgressSteps {...progressStepsStyle}>
           <ProgressStep
             label="First"
@@ -68,9 +70,7 @@ const Form: React.FC = () => {
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
           >
-            <View style={{ alignItems: "center" }}>
-              <Text>This is the content within step 2!</Text>
-            </View>
+            <Second />
           </ProgressStep>
           <ProgressStep
             label="Third"
@@ -109,7 +109,7 @@ const Form: React.FC = () => {
             </View>
           </ProgressStep>
         </ProgressSteps>
-      </View>
+      </Box>
     </>
   );
 };

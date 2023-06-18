@@ -16,6 +16,7 @@ const StepOne: React.FC = () => {
           width: "100%",
           height: "100%",
           paddingHorizontal: 20,
+          backgroundColor: "#fff",
         }}
       >
         <Box mt={20}>
