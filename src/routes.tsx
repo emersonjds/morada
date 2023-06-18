@@ -10,6 +10,7 @@ import Bills from "./pages/Bills";
 import Form from "./pages/Form";
 import Transition from "./pages/Transition";
 import Calendar from "./pages/Calendar";
+import CalendarPage from "./pages/Calendar";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,7 +35,7 @@ const MyTabs = () => {
       />
       <Tab.Screen
         name="Calendar"
-        component={Calendar}
+        component={CalendarPage}
         options={{
           tabBarLabel: "Calendar",
           tabBarLabelStyle: {
@@ -68,11 +69,11 @@ const Routes = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="MyTabs"
           component={MyTabs}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen
           name="Form"
           component={Form}
@@ -83,12 +84,11 @@ const Routes = () => {
           component={Transition}
           options={{ headerShown: false }}
         />
-
-        {/* <Stack.Screen
+        <Stack.Screen
           name="MyTabs"
           component={MyTabs}
           options={{ headerShown: false }}
-        /> */}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

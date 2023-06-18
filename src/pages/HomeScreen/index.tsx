@@ -4,8 +4,6 @@ import { Text } from "react-native-paper";
 import { Button } from "react-native-paper";
 import LottieView from "lottie-react-native";
 
-// import { Container } from './styles';
-
 const HomeScreen: React.FC = () => {
   const animation = useRef(null);
 
@@ -20,11 +18,10 @@ const HomeScreen: React.FC = () => {
             // height: 200,
             backgroundColor: "#fff",
           }}
-          // Find more Lottie files at https://lottiefiles.com/featured
           source={require("../../assets/success.json")}
         />
 
-        <Box borderColor={"#000"} borderWidth={1} p={10} borderRadius={10}>
+        <Box borderColor={"#000"} borderWidth={0.5} p={10} borderRadius={10}>
           <Box mt={20}>
             <Text>Tudo certo !!! </Text>
           </Box>
@@ -51,7 +48,7 @@ const HomeScreen: React.FC = () => {
               mode="contained"
               onPress={() => console.log("Pressed")}
               style={{
-                backgroundColor: "#000",
+                backgroundColor: "#11009E",
               }}
             >
               Aceitar proposta
