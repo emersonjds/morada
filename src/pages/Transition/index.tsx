@@ -12,7 +12,7 @@ const Transition: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate("MyTabs");
-    }, 8000);
+    }, 3000);
   }, []);
 
   return (

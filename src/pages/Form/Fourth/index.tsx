@@ -4,7 +4,7 @@ import { Text, Checkbox } from "react-native-paper";
 import { RadioButton } from "react-native-paper";
 
 const Fourth: FC = () => {
-  const [checked, setChecked] = React.useState("");
+  const [checked, setChecked] = React.useState("first");
 
   const comodos = [
     {
