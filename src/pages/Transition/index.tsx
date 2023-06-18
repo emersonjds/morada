@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { View } from "react-native";
 import { Box } from "../../components/Spacing";
 import { Text } from "react-native-paper";
 import LottieView from "lottie-react-native";
@@ -25,10 +24,9 @@ const Transition: React.FC = () => {
         pl={20}
         pr={20}
       >
-        <Text>
+        <Text variant="bodyLarge">
           Aguarde, estamos procurando a melhor opção de crédito para você
         </Text>
-
         <Box>
           <LottieView
             autoPlay
@@ -38,19 +36,23 @@ const Transition: React.FC = () => {
               height: 200,
               backgroundColor: "#eee",
             }}
-            // Find more Lottie files at https://lottiefiles.com/featured
             source={require("../../assets/house.json")}
           />
         </Box>
         <Box>
           <Box mt={20}>
-            <Text>- Engenheiros da região para o seu projeto</Text>
+            <Text variant="bodyLarge">
+              - Engenheiros da região para o seu projeto
+            </Text>
           </Box>
+
           <Box mt={20}>
             <Text>- Pedreiros mais próximos</Text>
           </Box>
           <Box mt={20}>
-            <Text>- Solicitando material para depósitos próximos</Text>
+            <Text variant="bodyLarge">
+              - Solicitando material para depósitos próximos
+            </Text>
           </Box>
         </Box>
       </Box>
