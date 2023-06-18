@@ -5363,6 +5363,11 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
+moment@2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"
@@ -6007,6 +6012,14 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-calendario@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-calendario/-/react-native-calendario-3.3.2.tgz#8b9b068c31a401728c9a02f0900cf1ca9f3577c1"
+  integrity sha512-GlI++NNXac0KjIBHFqs1D5gkjs6svbLEeH3ney8pyL7k5slsyO/Eg8qbQT1ImaWbqJzUbNhSbrHBuVV2JLg6eA==
+  dependencies:
+    moment "2.29.1"
+    react-native-month "^1.5.2"
+
 react-native-codegen@^0.71.5:
   version "0.71.5"
   resolved "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.71.5.tgz"
@@ -6021,6 +6034,11 @@ react-native-gradle-plugin@^0.71.18:
   version "0.71.19"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz"
   integrity sha512-1dVk9NwhoyKHCSxcrM6vY6cxmojeATsBobDicX0ZKr7DgUF2cBQRTKsimQFvzH8XhOVXyH8p4HyDSZNIFI8OlQ==
+
+react-native-month@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/react-native-month/-/react-native-month-1.5.2.tgz#d80a42adc3ab7e4e934b9338b6bb6c045fd88d92"
+  integrity sha512-XBHTKeXB8pz04km9Rr+Vf6bpi2XKbaioMlD+swjMytl65B8f/yH7C/bdnVXvrkNarEi4zOQHcqESRQVm18I69Q==
 
 react-native-paper@^5.8.0:
   version "5.8.0"
