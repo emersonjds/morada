@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { FC } from "react";
 
 import { View, Text } from "react-native";
 
@@ -8,7 +8,7 @@ import StepOne from "./StepOne";
 import Second from "./Second";
 import { Box } from "../../components/Spacing";
 
-const Form: React.FC = () => {
+const Form: FC = () => {
   const navigation = useNavigation();
 
   const onNextStep = () => {
@@ -51,7 +51,7 @@ const Form: React.FC = () => {
       <Box flex={1} bg="#fff" mt={20}>
         <ProgressSteps {...progressStepsStyle}>
           <ProgressStep
-            label="First"
+            label="Nome"
             onNext={onNextStep}
             onPrevious={onPrevStep}
             scrollViewProps={defaultScrollViewProps}
@@ -63,7 +63,7 @@ const Form: React.FC = () => {
             </View>
           </ProgressStep>
           <ProgressStep
-            label="Second"
+            label="CPF"
             onNext={onNextStep}
             onPrevious={onPrevStep}
             scrollViewProps={defaultScrollViewProps}
@@ -73,7 +73,7 @@ const Form: React.FC = () => {
             <Second />
           </ProgressStep>
           <ProgressStep
-            label="Third"
+            label="Renda"
             onNext={onNextStep}
             onPrevious={onPrevStep}
             scrollViewProps={defaultScrollViewProps}
@@ -85,7 +85,7 @@ const Form: React.FC = () => {
             </View>
           </ProgressStep>
           <ProgressStep
-            label="Fourth"
+            label="Reforma"
             onNext={onNextStep}
             onPrevious={onPrevStep}
             scrollViewProps={defaultScrollViewProps}
@@ -97,7 +97,7 @@ const Form: React.FC = () => {
             </View>
           </ProgressStep>
           <ProgressStep
-            label="Fifth"
+            label="Valor"
             onPrevious={onPrevStep}
             onSubmit={onSubmitSteps}
             scrollViewProps={defaultScrollViewProps}
