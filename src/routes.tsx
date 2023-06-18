@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FontAwesome, AntDesign } from "@expo/vector-icons";
 import HomeScreen from "./pages/HomeScreen";
 import Bills from "./pages/Bills";
+import Form from "./pages/Form";
 
 const Tab = createBottomTabNavigator();
 
@@ -51,6 +52,11 @@ const Routes = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="Form"
+          component={Form}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="MyTabs"
           component={MyTabs}
