@@ -8,6 +8,7 @@ import { FontAwesome, AntDesign } from "@expo/vector-icons";
 import HomeScreen from "./pages/HomeScreen";
 import Bills from "./pages/Bills";
 import Form from "./pages/Form";
+import Transition from "./pages/Transition";
 
 const Tab = createBottomTabNavigator();
 
@@ -57,6 +58,12 @@ const Routes = () => {
           component={Form}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Transition"
+          component={Transition}
+          options={{ headerShown: false }}
+        />
+
         <Stack.Screen
           name="MyTabs"
           component={MyTabs}

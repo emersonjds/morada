@@ -8,12 +8,14 @@ import StepOne from "./One";
 import Second from "./Second";
 import { Box } from "../../components/Spacing";
 import Third from "./Third";
+import Fourth from "./Fourth";
+import Fifth from "./Fifth";
 
 const Form: FC = () => {
   const navigation = useNavigation();
 
   const onSubmitSteps = () => {
-    navigation.navigate("MyTabs");
+    navigation.navigate("Transition");
   };
 
   const progressStepsStyle = {
@@ -82,9 +84,7 @@ const Form: FC = () => {
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
           >
-            <View style={{ alignItems: "center" }}>
-              <Text>This is the content within step 4!</Text>
-            </View>
+            <Fourth />
           </ProgressStep>
           <ProgressStep
             label="Valor"
@@ -95,9 +95,7 @@ const Form: FC = () => {
             nextBtnTextStyle={buttonTextStyle}
             previousBtnTextStyle={buttonTextStyle}
           >
-            <View style={{ alignItems: "center" }}>
-              <Text>This is the content within step 5!</Text>
-            </View>
+            <Fifth />
           </ProgressStep>
         </ProgressSteps>
       </Box>
