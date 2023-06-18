@@ -4,7 +4,7 @@ import React, { FC } from "react";
 import { View, Text } from "react-native";
 
 import { ProgressSteps, ProgressStep } from "react-native-progress-steps";
-import StepOne from "./StepOne";
+import StepOne from "./One";
 import Second from "./Second";
 import { Box } from "../../components/Spacing";
 
