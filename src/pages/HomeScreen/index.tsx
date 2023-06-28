@@ -21,11 +21,10 @@ const HomeScreen: React.FC = () => {
     <>
       <Box flex={1} p={20} alignItems={"center"} justifyContent={"center"}>
         <LottieView
+          // add autoplay
           //   autoPlay
           ref={animation}
           style={{
-            // width: 200,
-            // height: 200,
             backgroundColor: "#fff",
           }}
           source={require("../../assets/success.json")}
